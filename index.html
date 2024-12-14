@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD SYSTEM</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="crud container my-3 py-3">
+      <div class="head text-center text-uppercase">
+        <h2>CRUD</h2>
+        <p>Product Management System</p>
+      </div>
+      <div class="input">
+        <input type="text" id="titel" placeholder="Titel" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="price"
+            placeholder="Price.."
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="taxes"
+            placeholder="Taxes.."
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="ads"
+            placeholder="Ads.."
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="discount"
+            placeholder="Discount.."
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count.." />
+        <input type="text" id="category" placeholder="category.." />
+        <button id="submit">Create</button>
+      </div>
+      <div class="output">
+        <div id="deletAll"></div>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>TITEL</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>Total</th>
+            <th>CATEGORY</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
